@@ -1,0 +1,143 @@
+{
+    "publisher": "EdgardMessias",
+    "name": "php-noverify",
+    "displayName": "PHP NoVerify",
+    "description": "NoVerify is a PHP linter: it finds possible bugs and style violations in your code.",
+    "version": "0.1.0",
+    "preview": true,
+    "icon": "resources/logo.png",
+    "license": "MIT",
+    "extensionKind": [
+        "ui"
+    ],
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "bugs": {
+        "url": "https://github.com/edgardmessias/vscode.php-noverify/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/edgardmessias/vscode.php-noverify.git"
+    },
+    "homepage": "https://github.com/edgardmessias/vscode.php-noverify",
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "autocompletion",
+        "help",
+        "intellisense",
+        "linter",
+        "php",
+        "refactor"
+    ],
+    "activationEvents": [
+        "onLanguage:php",
+        "workspaceContains:**/*.php"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [],
+        "menus": {
+            "commandPalette": [],
+            "view/item/context": [],
+            "view/title": []
+        },
+        "keybindings": [],
+        "configuration": [
+            {
+                "title": "PHP NoVerify",
+                "properties": {
+                    "php-noverify.noverifyExtraArgs": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "default": [],
+                        "scope": "window",
+                        "description": "Extra argumets for NoVerify language server"
+                    },
+                    "php-noverify.noverifyPath": {
+                        "type": "string",
+                        "description": "The path to the noverify executable.",
+                        "default": "noverify"
+                    },
+                    "php-noverify.phpStubsPath": {
+                        "type": "string",
+                        "description": "The path to php stubs. Default use internal.",
+                        "default": null
+                    },
+                    "php-noverify.trace.server": {
+                        "type": "string",
+                        "scope": "window",
+                        "enum": [
+                            "off",
+                            "messages",
+                            "verbose"
+                        ],
+                        "default": "off",
+                        "description": "Traces the communication between VS Code and the NoVerify language server."
+                    }
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "changelog:last": "conventional-changelog -p angular -r 2",
+        "changelog:preview": "conventional-changelog -p angular -u",
+        "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+        "clean": "rimraf ./out ./coverage ./test-reports",
+        "compile": "tsc -p ./",
+        "download-stubs": "download-git-repo JetBrains/phpstorm-stubs stubs",
+        "lint": "eslint -c .eslintrc.js --ext .ts src",
+        "organize": "node ./out/tools/organize.js",
+        "release": "release-it",
+        "test": "npm run compile && node ./out/test/runTests.js",
+        "vscode:prepublish": "npm run clean && npm run download-stubs && npm run compile",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/istanbul-lib-coverage": "^2.0.1",
+        "@types/istanbul-lib-hook": "^2.0.0",
+        "@types/istanbul-lib-instrument": "^1.7.4",
+        "@types/istanbul-lib-report": "^3.0.0",
+        "@types/istanbul-lib-source-maps": "^4.0.1",
+        "@types/istanbul-reports": "^1.1.2",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "~9.6.56",
+        "@types/sinon": "^9.0.4",
+        "@types/vscode": "1.41.0",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "conventional-changelog-cli": "^2.0.34",
+        "decache": "^4.6.0",
+        "download-git-repo-cli": "^3.0.2",
+        "eslint": "^7.1.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.3",
+        "extract-zip": "^2.0.0",
+        "glob": "^7.1.6",
+        "istanbul-lib-coverage": "^3.0.0",
+        "istanbul-lib-hook": "^3.0.0",
+        "istanbul-lib-instrument": "^4.0.3",
+        "istanbul-lib-report": "^3.0.0",
+        "istanbul-lib-source-maps": "^4.0.0",
+        "istanbul-reports": "^3.0.2",
+        "mocha": "^7.2.0",
+        "mocha-github-actions-reporter": "^0.2.1",
+        "mocha-multi-reporters": "^1.1.7",
+        "original-fs": "^1.1.0",
+        "prettier": "^2.0.5",
+        "release-it": "^13.6.0",
+        "rimraf": "^3.0.2",
+        "sinon": "^9.0.2",
+        "source-map-support": "^0.5.19",
+        "typescript": "^3.9.3",
+        "vscode-test": "^1.4.0"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^6.1.3"
+    }
+}
