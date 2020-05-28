@@ -20,7 +20,7 @@
 
 ![](/resources/noverify_small.png)
 
-NoVerify is a PHP linter: it finds possible bugs and style violations in your code.
+[NoVerify](https://github.com/VKCOM/noverify) is a PHP linter: it finds possible bugs and style violations in your code.
 
 * NoVerify has no config: any reported issue in your PHPDoc or PHP code must be fixed.
 * NoVerify aims to understand PHP code at least as well as PHPStorm does. If it behaves incorrectly or suboptimally, please [report issue](https://github.com/VKCOM/noverify/issues/new).
