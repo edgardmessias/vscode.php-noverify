@@ -59,6 +59,12 @@ This extension contributes the following settings (default values):
 <!--begin-settings-->
 ```js
 {
+  // If true, the language server will provide build, vet errors and the extension will ignore the `buildOnSave`, `vetOnSave` settings.
+  "php-noverify.features.diagnostics": true,
+
+  // If true, the language server will provide clickable Godoc links for import statements.
+  "php-noverify.features.documentLink": true,
+
   // Extra argumets for NoVerify language server
   "php-noverify.noverifyExtraArgs": [],
 
@@ -69,7 +75,10 @@ This extension contributes the following settings (default values):
   "php-noverify.phpStubsPath": null,
 
   // Traces the communication between VS Code and the NoVerify language server.
-  "php-noverify.trace.server": "off"
+  "php-noverify.trace.server": "off",
+
+  // Use the NoVerify language server for powering language features like code navigation, completion, formatting & diagnostics.
+  "php-noverify.useLanguageServer": true
 }
 ```
 <!--end-settings-->

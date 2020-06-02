@@ -38,7 +38,13 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [],
+        "commands": [
+            {
+                "command": "php-noverify.languageserver.restart",
+                "title": "NoVerify: Restart Language Server",
+                "description": "Restart the running instance of the language server"
+            }
+        ],
         "menus": {
             "commandPalette": [],
             "view/item/context": [],
@@ -49,6 +55,16 @@
             {
                 "title": "PHP NoVerify",
                 "properties": {
+                    "php-noverify.features.diagnostics": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "If true, the language server will provide build, vet errors and the extension will ignore the `buildOnSave`, `vetOnSave` settings."
+                    },
+                    "php-noverify.features.documentLink": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "If true, the language server will provide clickable Godoc links for import statements."
+                    },
                     "php-noverify.noverifyExtraArgs": {
                         "type": "array",
                         "items": {
@@ -78,6 +94,11 @@
                         ],
                         "default": "off",
                         "description": "Traces the communication between VS Code and the NoVerify language server."
+                    },
+                    "php-noverify.useLanguageServer": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Use the NoVerify language server for powering language features like code navigation, completion, formatting & diagnostics."
                     }
                 }
             }
@@ -98,6 +119,7 @@
         "watch": "tsc -watch -p ./"
     },
     "devDependencies": {
+        "@types/deep-equal": "^1.0.1",
         "@types/glob": "^7.1.1",
         "@types/istanbul-lib-coverage": "^2.0.1",
         "@types/istanbul-lib-hook": "^2.0.0",
@@ -138,6 +160,7 @@
         "vscode-test": "^1.4.0"
     },
     "dependencies": {
+        "deep-equal": "^2.0.3",
         "vscode-languageclient": "^6.1.3"
     }
 }
