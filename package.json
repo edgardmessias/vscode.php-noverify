@@ -3,7 +3,7 @@
     "name": "php-noverify",
     "displayName": "PHP NoVerify",
     "description": "NoVerify is a PHP linter: it finds possible bugs and style violations in your code.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "preview": true,
     "icon": "resources/logo.png",
     "license": "MIT",
