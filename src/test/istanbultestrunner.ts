@@ -32,7 +32,7 @@ if (!tty.getWindowSize) {
 
 let mocha = new Mocha({
   ui: "tdd",
-  useColors: true,
+  color: true,
 });
 
 let testOptions: any;
@@ -64,6 +64,7 @@ function _readCoverOptions(testsRoot: string): ITestRunnerOptions | undefined {
 // eslint-disable-next-line @typescript-eslint/ban-types
 export function run(testsRoot: string, clb: Function): any {
   // Enable source map support
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   require("source-map-support").install();
 
   // Read configuration for the coverage file
