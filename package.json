@@ -128,7 +128,7 @@
         "@types/istanbul-lib-source-maps": "^4.0.1",
         "@types/istanbul-reports": "^3.0.0",
         "@types/mocha": "^8.0.3",
-        "@types/node": "~9.6.56",
+        "@types/node": "~9.6.58",
         "@types/sinon": "^9.0.5",
         "@types/vscode": "1.41.0",
         "@typescript-eslint/eslint-plugin": "^3.10.0",
