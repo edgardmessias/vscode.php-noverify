@@ -137,7 +137,7 @@
         "decache": "^4.6.0",
         "download-git-repo-cli": "^3.0.2",
         "eslint": "^7.9.0",
-        "eslint-config-prettier": "^6.11.0",
+        "eslint-config-prettier": "^6.12.0",
         "eslint-plugin-prettier": "^3.1.4",
         "extract-zip": "^2.0.1",
         "glob": "^7.1.6",
