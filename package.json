@@ -160,7 +160,7 @@
         "vscode-test": "^1.4.0"
     },
     "dependencies": {
-        "deep-equal": "^2.0.3",
+        "deep-equal": "^2.0.4",
         "vscode-languageclient": "^6.1.3"
     }
 }
