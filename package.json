@@ -132,7 +132,7 @@
         "@types/sinon": "^9.0.8",
         "@types/vscode": "1.41.0",
         "@typescript-eslint/eslint-plugin": "^4.6.0",
-        "@typescript-eslint/parser": "^4.5.0",
+        "@typescript-eslint/parser": "^4.6.0",
         "conventional-changelog-cli": "^2.1.0",
         "decache": "^4.6.0",
         "download-git-repo-cli": "^3.0.2",
