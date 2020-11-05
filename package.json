@@ -133,7 +133,7 @@
         "@types/vscode": "1.41.0",
         "@typescript-eslint/eslint-plugin": "^4.6.1",
         "@typescript-eslint/parser": "^4.6.1",
-        "conventional-changelog-cli": "^2.1.0",
+        "conventional-changelog-cli": "^2.1.1",
         "decache": "^4.6.0",
         "download-git-repo-cli": "^3.0.2",
         "eslint": "^7.12.1",
