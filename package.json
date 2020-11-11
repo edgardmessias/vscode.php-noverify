@@ -127,7 +127,7 @@
         "@types/istanbul-lib-report": "^3.0.0",
         "@types/istanbul-lib-source-maps": "^4.0.1",
         "@types/istanbul-reports": "^3.0.0",
-        "@types/mocha": "^8.0.3",
+        "@types/mocha": "^8.0.4",
         "@types/node": "~9.6.58",
         "@types/sinon": "^9.0.8",
         "@types/vscode": "1.41.0",
