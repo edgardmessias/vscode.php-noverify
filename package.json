@@ -136,7 +136,7 @@
         "conventional-changelog-cli": "^2.1.1",
         "decache": "^4.6.0",
         "download-git-repo-cli": "^3.0.2",
-        "eslint": "^7.13.0",
+        "eslint": "^7.26.0",
         "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-prettier": "^3.1.4",
         "extract-zip": "^2.0.1",
