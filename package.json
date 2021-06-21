@@ -131,7 +131,7 @@
         "@types/node": "~9.6.58",
         "@types/sinon": "^9.0.8",
         "@types/vscode": "1.41.0",
-        "@typescript-eslint/eslint-plugin": "^4.8.0",
+        "@typescript-eslint/eslint-plugin": "^4.28.0",
         "@typescript-eslint/parser": "^4.8.0",
         "conventional-changelog-cli": "^2.1.1",
         "decache": "^4.6.0",
